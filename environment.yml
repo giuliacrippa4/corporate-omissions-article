@@ -1,0 +1,27 @@
+name: corporate-omissions
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - statsmodels
+  - matplotlib
+  - seaborn
+  - pyarrow
+  - jupyterlab
+  - tqdm
+  - pyyaml
+  - pip:
+      - pygam
+      - linearmodels
+      - wrds
+      - yfinance
+      - pandas-datareader
+      - sqlalchemy
+      - psycopg2-binary
+      - openpyxl
+      - polars

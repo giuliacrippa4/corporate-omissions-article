@@ -1,0 +1,36 @@
+# This repository is code-only. The emissions, accounting and returns data are
+# licensed from S&P Trucost, Compustat and CRSP and cannot be redistributed.
+/data/
+*.csv
+*.parquet
+*.RData
+
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+env/
+.env
+.env.*
+build/
+dist/
+*.egg-info/
+.DS_Store
+.vscode/
+.idea/
+.Rapp.history
+.Rhistory
+.RData
+
+*.aux
+*.bbl
+*.bbl-SAVE-ERROR
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.log

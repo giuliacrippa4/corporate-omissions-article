@@ -1,0 +1,32 @@
+\begin{figure}[htbp]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tikzpicture}[node distance=1cm and 1cm]
+
+    \tikzstyle{data} = [cylinder, shape border rotate=90, aspect=0.25, draw, fill=gray!20, text centered, minimum height=3em]
+    \tikzstyle{process} = [rectangle, rounded corners=10pt, minimum width=2.7cm, minimum height=1.4cm, text centered, draw, fill=none]
+    \tikzstyle{arrow} = [thick, ->, >=stealth]
+    \tikzstyle{note} = [rectangle, draw=black, dashed, fill=white, text width=3.5cm, align=center, font=\footnotesize]
+
+    \node (data) [data, align=center] {Observable \\ data};
+    \node (step1) [process, right=of data, fill=green!20, align=center] {\textbf{Outcome model}  \\ estimation};
+    \node (step2) [process, right=of step1, fill=violet!20, align=center] {\textbf{Missing data} \\ imputation};
+    \node (step3) [process, right=of step2, fill=cyan!20, align=center] {\textbf{Response} \\ \textbf{Mechanism}};
+    \node (step4) [process, right=of step3, fill=orange!20] {Exponential \textbf{tilting}};
+    \node (step5) [process, right=of step4, fill=gray!40, align=center] {Imputed data \\ \textbf{adjustment}};
+
+    \draw [arrow] (data) -- (step1);
+    \draw [arrow] (step1) -- (step2);
+    \draw [arrow] (step2) -- (step3);
+    \draw [arrow] (step3) -- (step4);
+    \draw [arrow] (step4) -- (step5);
+
+    \node (note) [note, below=1.2cm of step3] {\textbf{Sensitivity analysis} \\ Average of 300 \& 500 \\ Monte Carlo draws};
+    \draw[dashed,->] (note.north west) -- (step2.south);
+    \draw[dashed,->] (note.north east) -- (step4.south);
+
+    \end{tikzpicture}
+    }
+    \caption{Workflow of the missing data imputation methodology. The procedure consists of five main steps: (1) outcome modeling based on observable data; (2) imputation of missing values; (3) estimation of the response mechanism; (4) application of exponential tilting; and (5) adjustment of the imputed values. Additionally, a sensitivity analysis is conducted using Monte Carlo simulations with 300 and 500 random draws, respectively.}
+    \label{fig:missing-data-workflow}
+\end{figure}
