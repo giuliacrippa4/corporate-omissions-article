@@ -82,7 +82,6 @@ corporate-omissions-article/
 │
 ├── notebooks/                   # Measurement pipeline (Python)
 ├── Returns/                     # Asset-pricing analysis (R)
-├── docs/                        # main.tex, references.bib, figures, compiled PDF
 │
 ├── environment.yml              # Conda environment
 ├── environment.lock.yml         # Fully pinned environment
@@ -156,8 +155,6 @@ and presentation layers.
 
 - Several scripts in `Returns/` and two notebooks contain absolute paths pointing at the
   original author's machine. Adjust these to your own working directory before running.
-- `docs/main.tex` compiles against the figures in `docs/figs/`. Regenerating them requires
-  the full pipeline and therefore the licensed data.
 
 ---
 
